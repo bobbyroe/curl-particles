@@ -1,11 +1,19 @@
 import { getCurl } from "./libs/curl.js";
-const SCREEN_WIDTH = window.innerWidth;
-const SCREEN_HEIGHT = window.innerHeight;
+
+let SCREEN_WIDTH = window.innerWidth;
+let SCREEN_HEIGHT = window.innerHeight;
+function setScreenWidth (newWidth) { SCREEN_WIDTH = newWidth };
+function setScreenHeight (newHeight) { SCREEN_HEIGHT = newHeight };
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 document.body.appendChild(canvas);
 canvas.width = SCREEN_WIDTH;
 canvas.height = SCREEN_HEIGHT;
+
+window.addEventListener("resize", function() {
+  setScreenWidth(window.innerWidth);
+  setScreenHeight(window.innerHeight);
+});
 
 function getParticle(opts) {
   let { pos, vel, col, fadeRate } = opts;
