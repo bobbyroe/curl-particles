@@ -4,15 +4,20 @@ A simple JavaScript application that simulates particle flow using curl noise. I
 
 ![Particle Flow Simulation Screenshot](./screenshot.jpg)
 
+Tutorial on [YouTube](https://youtu.be/InvbGEtXPD8)
+[Keith Peters Blog](https://www.bit-101.com/2017/2021/07/curl-noise/)
+
 ## Features
 
 - **Dynamic Particle System**: Particles are continuously emitted and updated.
 - **Curl Noise Integration**: Uses curl noise to influence particle trajectories, creating smooth and natural motion.
 - **Canvas Rendering**: Utilizes the HTML5 Canvas API for rendering particles. No other libraries.
 
+
+
 ## Demo
 
-You can view a live demo of the project [here](https://yourusername.github.io/particle-flow-simulation/).
+You can view a live demo of the project [here](https://bobbyroe.github.io/curl-particles/).
 
 ## Getting Started
 
@@ -26,8 +31,8 @@ You can view a live demo of the project [here](https://yourusername.github.io/pa
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/particle-flow-simulation.git
-   cd particle-flow-simulation
+   git clone https://github.com/bobbyroe/curl-particles.git
+   cd curl-particles
    ```
 
 2. **Install Dependencies**
