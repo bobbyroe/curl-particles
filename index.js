@@ -10,17 +10,17 @@ canvas.height = SCREEN_HEIGHT;
 function getParticle(opts) {
   let { pos, vel, col, fadeRate } = opts;
   let { x, y } = pos;
-  let size = 2;
+  let size = 4;
   const noiseForce = 1;
   const noiseScale = 0.01;
   function update(t) {
     let curl = getCurl(x * noiseScale, y * noiseScale, t);
     x += vel.x;
     y += vel.y;
-    x += curl.x * noiseForce;
-    y += curl.y * noiseForce;
+    // x += curl.x * noiseForce;
+    // y += curl.y * noiseForce;
     col.alpha -= fadeRate;
-    col.lightness -= fadeRate * 100;
+    // col.lightness -= fadeRate * 100;
   }
   function render(c) {
     if (col.alpha > 0.01) {
@@ -43,7 +43,7 @@ function getEmitter() {
       p.render(ctx);
     });
     let angle = Math.random() * Math.PI * 2;
-    let speed = Math.random() + 1;
+    let speed = Math.random() * 3 + 1;
     let curl = getCurl(t, 0, 0);
     let pOptions = {
       pos: { x: SCREEN_WIDTH * 0.5, y: SCREEN_HEIGHT * 0.5 },
