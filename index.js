@@ -17,10 +17,10 @@ function getParticle(opts) {
     let curl = getCurl(x * noiseScale, y * noiseScale, t);
     x += vel.x;
     y += vel.y;
-    // x += curl.x * noiseForce;
-    // y += curl.y * noiseForce;
+    x += curl.x * noiseForce;
+    y += curl.y * noiseForce;
     col.alpha -= fadeRate;
-    // col.lightness -= fadeRate * 100;
+    col.lightness -= fadeRate * 100;
   }
   function render(c) {
     if (col.alpha > 0.01) {
